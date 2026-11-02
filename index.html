@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="ro" class="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stațiunea Moneasa — Lacul, Punctul de Belvedere, Cuptorul de Fier, Grota Ursului și itinerare de weekend | Prin Preajmă</title>
   <meta name="description" content="Descoperă Stațiunea Moneasa („Perla Apusenilor”, jud. Arad): plimbări lângă lac și apele mezotermale, Punctul de Belvedere, Cuptorul de Topit Fier, Cariera de Marmură, Grota Ursului și excursii la Cetatea Deznei și Via Ferrata.">
   <link rel="canonical" href="https://moneasa.prinpreajma.ro/">
+
+  <!-- Theme State Initializer (Zero FOUC - Sincronizat cu prinpreajma.ro) -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('pp_theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) {}
+    })();
+  </script>
 
   <!-- Open Graph / Distribuire Socială -->
   <meta property="og:type" content="website">
@@ -114,6 +130,17 @@
           <a class="site-nav__link" href="#dezna-si-viaferrata">Dezna &amp; Via Ferrata</a>
           <a class="site-nav__link" href="#distribuie">Distribuie</a>
         </div>
+        <button
+          type="button"
+          id="theme-toggle-btn"
+          class="theme-toggle-btn"
+          aria-label="Comută tema (Dark / Light)"
+          title="Comută tema (Dark / Light)"
+        >
+          <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+        </button>
         <a class="site-nav__cta" href="#planificare" data-track="planificare_vizita" data-track-label="Header Moneasa Planifica">Planifică vizita</a>
       </nav>
     </div>
